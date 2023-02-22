@@ -10,7 +10,7 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
 ```{r}
-Glink="https://github.com/543-Van-Deliverables/Deliverable-3/raw/main/"
+Glink="https://github.com/543-Van-Deliverables/Deliverable3/raw/main/"
 Flink="CountryRankingFinal.csv"
 CRF=read.csv(paste0(Glink,Flink))
 ```
@@ -39,15 +39,15 @@ baseMap
 ```
 ```{r}
 numericMapCD= baseMap + geom_sf(data=mapWorld_indexes,aes(fill=CarbonDioxide),color=NA)
-numericMapCD+ scale_fill_gradient(low = 'darkred',high= 'yellow')+ggtitle("Carbon Dioxide Emissions by Country")
+numericMapCD+ scale_fill_gradient(low = 'darkred',high= 'yellow')+ggtitle("Carbon Dioxide Emissions by Country\n(in metric tons released)")
 ```
 ```{r}
 numericMapIG= baseMap + geom_sf(data=mapWorld_indexes,aes(fill=IndustrialGrowth),color=NA)
-numericMapIG+ scale_fill_gradient(low = 'darkblue',high= 'lightblue') +ggtitle("Industrial Growth by Country")
+numericMapIG+ scale_fill_gradient(low = 'darkblue',high= 'lightblue') +ggtitle("Industrial Production Growth by Country\n(annual percentage increase)")
 ```
 ```{r}
 numericMapLF= baseMap + geom_sf(data=mapWorld_indexes,aes(fill=Laborforce),color=NA)
-numericMapLF+ scale_fill_gradient(low = 'darkgreen',high= 'lightgreen') +ggtitle("Labor Force by Country")
+numericMapLF+ scale_fill_gradient(low = 'darkgreen',high= 'lightgreen') +ggtitle("Labor Force by Country\n(total number of individuals working)")
 ```
 
 
