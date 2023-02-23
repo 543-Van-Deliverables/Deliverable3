@@ -14,9 +14,7 @@ Glink="https://github.com/543-Van-Deliverables/Deliverable3/raw/main/"
 Flink="CountryRankingFinal.csv"
 CRF=read.csv(paste0(Glink,Flink))
 ```
-```{r}
-str(CRF)
-```
+
 ```{r}
 linkMap="https://github.com/543-Van-Deliverables/Deliverable-3/raw/main/worldMap.geojson.txt" 
 library(sf)
@@ -24,12 +22,9 @@ library(sf)
 ```{r}
 mapWorld=read_sf(linkMap)
 ```
-```{r}
-head(mapWorld)
-```
+
 ```{r}
 mapWorld_indexes=merge(mapWorld, CRF, by='NAME') 
-str(mapWorld_indexes)
 ```
 ```{r}
 library(ggplot2)
